@@ -514,4 +514,9 @@ repo_update:
 	@$(MAKE) submodule_add_update URL=https://github.com/foez-ahmed/sv-genesis.git
 	@$(MAKE) submodule_add_update URL=https://github.com/squared-studio/documenter.git
 	@cp ./sub/sv-genesis/Makefile ./Makefile
-	@cp -r ./sub/sv-genesis/CI ./github
+	@cp -r ./sub/sv-genesis/CI ./.github
+	@cp -r ./sub/sv-genesis/inc ./inc
+	@cp -r ./sub/sv-genesis/inc ./inc
+	@cp -r ./sub/sv-genesis/intf ./intf
+	@cp -r ./sub/sv-genesis/rtl ./rtl
+	@cp -r ./sub/sv-genesis/tb ./tb
