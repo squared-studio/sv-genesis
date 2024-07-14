@@ -514,9 +514,16 @@ repo_update:
 	@$(MAKE) submodule_add_update URL=https://github.com/foez-ahmed/sv-genesis.git
 	@$(MAKE) submodule_add_update URL=https://github.com/squared-studio/documenter.git
 	@cp ./sub/sv-genesis/Makefile ./Makefile
-	@cp -r ./sub/sv-genesis/CI ./.github
-	@cp -r ./sub/sv-genesis/inc ./inc
-	@cp -r ./sub/sv-genesis/inc ./inc
-	@cp -r ./sub/sv-genesis/intf ./intf
-	@cp -r ./sub/sv-genesis/rtl ./rtl
-	@cp -r ./sub/sv-genesis/tb ./tb
+	@mkdir -p ./.github/workflows
+	@cp -r ./sub/sv-genesis/*.yml ./.github/workflows/
+	@mkdir -p ./tb/__no_upload__
+	@mkdir -p ./rtl/__no_upload__
+	@mkdir -p ./intf/__no_upload__
+	@mkdir -p ./inc/__no_upload__
+	@mkdir -p ./inc/vip/
+	@cp ./sub/sv-genesis/tb_ess.sv ./inc/vip/
+	@cp ./sub/sv-genesis/no_upoload_readme.md ./inc/__no_upload__/
+	@cp ./sub/sv-genesis/no_upoload_readme.md ./intf/__no_upload__/
+	@cp ./sub/sv-genesis/no_upoload_readme.md ./rtl/__no_upload__/
+	@cp ./sub/sv-genesis/no_upoload_readme.md ./tb/__no_upload__/
+	@git add . -f
