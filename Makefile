@@ -516,7 +516,7 @@ submodule_add_update:
 
 .PHONY: add_ignore
 add_ignore:
-	@$(if $(filter $(EX),$(shell cat ./.gitignore)), echo "", echo "$(EX)" >> ./.gitignore)
+	@$(if $(filter $(EX),$(shell cat ./.gitignore)), : , echo "$(EX)" >> ./.gitignore)
 
 .PHONY: repo_update
 repo_update: ci_run
