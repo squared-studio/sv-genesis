@@ -522,8 +522,8 @@ repo_update:
 	@mkdir -p ./inc/__no_upload__
 	@mkdir -p ./inc/vip/
 	@cp ./sub/sv-genesis/tb_ess.sv ./inc/vip/
-	@cp ./sub/sv-genesis/no_upoload_readme.md ./inc/__no_upload__/
-	@cp ./sub/sv-genesis/no_upoload_readme.md ./intf/__no_upload__/
-	@cp ./sub/sv-genesis/no_upoload_readme.md ./rtl/__no_upload__/
-	@cp ./sub/sv-genesis/no_upoload_readme.md ./tb/__no_upload__/
+	@cp ./sub/sv-genesis/no_upoload_readme.md ./inc/__no_upload__/readme.md
+	@cp ./sub/sv-genesis/no_upoload_readme.md ./intf/__no_upload__/readme.md
+	@cp ./sub/sv-genesis/no_upoload_readme.md ./rtl/__no_upload__/readme.md
+	@cp ./sub/sv-genesis/no_upoload_readme.md ./tb/__no_upload__/readme.md
 	@git add . -f
