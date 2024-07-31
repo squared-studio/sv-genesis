@@ -119,8 +119,8 @@ help: ss_print
 	@echo -e ""
 
 .PHONY: clean
-clean:
-	@- echo -e "$(CLEAN_TARGETS)" | sed "s/  //g" | sed "s/ /\nremoving /g"
+clean: ss_print
+	@$(foreach ct, $(CLEAN_TARGETS), echo -e "\033[0;33mremoving: \033[0m$(ct)";)
 	@rm -rf $(CLEAN_TARGETS)
 
 .PHONY: duplicate_check
@@ -274,7 +274,8 @@ rtl_init_sim: clean
 ####################################################################################################
 
 .PHONY: CI
-CI: clean ci_vivado_run ci_vivado_collect ci_print find_duplicates ss_print
+CI: clean ci_vivado_run ci_vivado_collect ci_print find_duplicates
+	@$(MAKE) ss_print
 
 include ci_run
 
