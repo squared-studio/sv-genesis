@@ -542,6 +542,7 @@ submodule_add_update:
 base_repo_init:
 	@$(MAKE) submodule_add_update URL=https://github.com/squared-studio/sv-genesis.git
 	@$(MAKE) submodule_add_update URL=https://github.com/squared-studio/documenter.git
+	@$(SUBMODULE_ADD_COMMON)
 
 .PHONY: add_ignore
 add_ignore:
