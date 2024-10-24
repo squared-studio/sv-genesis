@@ -87,7 +87,7 @@ function MAKE_FOUND () {
 }
 
 function MAKE_NOT_FOUND () {
-    echo -e "\033[1;31mmake\033[0m https://gnuwin32.sourceforge.net/downlinks/make-bin-zip.php" >> ___TEMP
+    echo -e "\033[1;31mmake\033[0m https://gnuwin32.sourceforge.net/packages/make.htm" >> ___TEMP
 }
 
 make --version && MAKE_FOUND || MAKE_NOT_FOUND
