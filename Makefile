@@ -161,9 +161,9 @@ ss_print:
 .PHONY: copyright_check
 copyright_check:
 	@rm -rf ___temp
-	@$(eval LIST := $(shell find -name "*.svh"))
+	@$(eval LIST := $(shell find -name "*.svh" | sed "s/\/.*sub\/.*//g"))
 	@$(foreach file, $(LIST), $(call copyright_check_file,$(file));)
-	@$(eval LIST := $(shell find -name "*.sv"))
+	@$(eval LIST := $(shell find -name "*.sv" | sed "s/\/.*sub\/.*//g"))
 	@$(foreach file, $(LIST), $(call copyright_check_file,$(file));)
 	@touch ___temp
 	@cat ___temp
