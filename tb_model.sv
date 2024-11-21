@@ -1,11 +1,10 @@
 /*
 Description
 Author : name (email)
-<br>
-<br>This file is part of squared-studio:sv-genesis
-<br>Copyright (c) 2024 squared-studio
-<br>Licensed under the MIT License
-<br>See LICENSE file in the project root for full license information
+This file is part of squared-studio:sv-genesis
+Copyright (c) 2024 squared-studio
+Licensed under the MIT License
+See LICENSE file in the project root for full license information
 */
 
 module tb_model;
